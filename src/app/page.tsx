@@ -20,11 +20,11 @@ export const metadata = {
   openGraph: {
     title: "nfc-card",
     description: "nfc-card",
-    url: "https://next-app-themes.vercel.app",
+    url: "https://nfc-card-lime.vercel.app/",
     siteName: "next-app-themes",
     images: [
       {
-        url: "https://next-app-themes.vercel.app/og.png",
+        url: "https://nfc-card-lime.vercel.app/",
         width: 1200,
         height: 630,
       },
