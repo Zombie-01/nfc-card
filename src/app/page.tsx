@@ -62,7 +62,7 @@ export default function Home() {
             <h2 className="text-center text-[24px]">Lorem, ipsum.</h2>
           </div>
         </div>
-        <div className="flex h-full flex-col justify-end gap-10 p-4 ">
+        <div className="flex h-full flex-col justify-end gap-4 p-4 ">
           <About />
           <Contact />
           <Social />

@@ -18,17 +18,17 @@ const Contact = () => {
         Contact me
       </h3>
       <div className="flex  flex-col justify-center gap-4">
-        <div className="flex items-center gap-2 rounded-lg p-1">
+        <div className="flex items-center gap-2 rounded-lg ">
           <Building size={24} />{" "}
           <CopyDivInnerText>T&SS合同会社</CopyDivInnerText>
         </div>
-        <div className="flex items-center gap-2 rounded-lg p-1">
+        <div className="flex items-center gap-2 rounded-lg ">
           <Pencil size={24} /> <CopyDivInnerText>代表取締役</CopyDivInnerText>
         </div>
-        <div className="flex items-center gap-2 rounded-lg p-1">
+        <div className="flex items-center gap-2 rounded-lg ">
           <Phone size={24} /> <CopyDivInnerText>09057756581</CopyDivInnerText>
         </div>
-        <div className="flex items-center gap-2 rounded-lg p-1">
+        <div className="flex items-center gap-2 rounded-lg ">
           <Globe size={24} />{" "}
           <CopyDivInnerText>tandss0608@gmail.com</CopyDivInnerText>
         </div>
