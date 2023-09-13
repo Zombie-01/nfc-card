@@ -8,8 +8,8 @@ import Providers from "@/components/providers"
 
 export const metadata = {
   title: {
-    default: "next-app-themes",
-    template: "%s | next-app-themes",
+    default: "nfc-card",
+    template: "%s | nfc-card",
   },
   icons: {
     icon: "/favicon.png",

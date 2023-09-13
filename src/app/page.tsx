@@ -1,6 +1,8 @@
-import clsx from "clsx"
-import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
+import About from "@/components/about"
+import Contact from "@/components/contact"
+import Social from "@/components/social"
 import ThemeSelect from "@/components/theme-select"
 
 interface Tools {
@@ -13,96 +15,11 @@ interface Stack {
   tools: Tools[]
 }
 
-const stack: Stack[] = [
-  {
-    category: "main",
-    tools: [
-      {
-        toolName: "next.js",
-        toolLink: "https://nextjs.org/",
-      },
-      {
-        toolName: "typescript",
-        toolLink: "https://www.typescriptlang.org/",
-      },
-      {
-        toolName: "tailwindcss",
-        toolLink: "https://tailwindcss.com/",
-      },
-    ],
-  },
-  {
-    category: "ui",
-    tools: [
-      {
-        toolName: "radix primitives",
-        toolLink: "https://www.radix-ui.com/",
-      },
-      {
-        toolName: "radix colors",
-        toolLink: "https://www.radix-ui.com/colors",
-      },
-      {
-        toolName: "framer motion",
-        toolLink: "https://www.framer.com/motion/",
-      },
-      {
-        toolName: "lucide icons",
-        toolLink: "https://lucide.dev/",
-      },
-    ],
-  },
-  {
-    category: "plugins",
-    tools: [
-      {
-        toolName: "windy-radix-palette",
-        toolLink: "https://github.com/brattonross/windy-radix-palette",
-      },
-      {
-        toolName: "tailwindcss-radix",
-        toolLink: "https://github.com/ecklf/tailwindcss-radix",
-      },
-      {
-        toolName: "prettier-plugin-tailwindcss",
-        toolLink: "https://github.com/tailwindlabs/prettier-plugin-tailwindcss",
-      },
-      {
-        toolName: "simple-import-sort",
-        toolLink: "https://github.com/lydell/eslint-plugin-simple-import-sort",
-      },
-    ],
-  },
-  {
-    category: "utilities",
-    tools: [
-      {
-        toolName: "next-themes",
-        toolLink: "https://github.com/pacocoursey/next-themes",
-      },
-      {
-        toolName: "clsx",
-        toolLink: "https://github.com/lukeed/clsx",
-      },
-      { toolName: "prettier", toolLink: "https://prettier.io" },
-      { toolName: "eslint", toolLink: "https://eslint.org" },
-    ],
-  },
-  {
-    category: "others",
-    tools: [
-      {
-        toolName: "vercel analytics",
-        toolLink: "https://vercel.com/analytics",
-      },
-    ],
-  },
-]
 export const metadata = {
-  description: "next.js app directory template with themes support",
+  description: "nfc-card",
   openGraph: {
-    title: "next-app-themes",
-    description: "next.js app directory template with themes support",
+    title: "nfc-card",
+    description: "nfc-card",
     url: "https://next-app-themes.vercel.app",
     siteName: "next-app-themes",
     images: [
@@ -119,64 +36,38 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="mx-2 flex min-h-screen flex-col items-center justify-center gap-8 text-center text-sm md:text-base">
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/gabxyz/next-app-themes"
-        className={clsx(
-          "bg-gradient-to-r from-purple-11 to-indigo-11 bg-clip-text text-xl font-bold text-transparent",
-          "select-none hover:opacity-80 motion-safe:duration-150 motion-safe:ease-productive-standard",
-        )}
-      >
-        next-app-themes
-      </a>
-      <p>
-        this is a basic next.js template pre-configured to support themes in the
-        new app directory
-      </p>
-      <ul>
-        {stack.map(({ category, tools }) => (
-          <li
-            key={category}
-            className="mt-2 flex flex-wrap items-center text-gray-12"
-          >
-            <span className="flex items-center font-medium">
-              {category}
-              <ArrowRight className="mx-1" size={16} />
-            </span>
-            {tools.map(({ toolName, toolLink }) => (
-              <div key={toolLink} className="text-gray-11">
-                <a
-                  key={toolLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={toolLink}
-                  className="text-gray-11 hover:text-gray-12 motion-safe:duration-200 motion-safe:ease-productive-standard"
-                >
-                  {toolName}
-                </a>
-                {tools[tools.length - 1]?.toolName !== toolName && (
-                  <span className="mx-1.5 mb-0.5 inline-flex h-1 w-1 flex-none rounded-full bg-gray-11"></span>
-                )}
-              </div>
-            ))}
-          </li>
-        ))}
-      </ul>
-      <ThemeSelect />
-      <p className="mt-16 text-sm font-medium text-slate-11">
-        made by{" "}
-        <a
-          className="cursor-pointer font-semibold text-slate-12 hover:text-slate-11 motion-safe:duration-150 motion-safe:ease-productive-standard"
-          aria-label="github profile"
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/gabxyz"
-        >
-          gabxyz
-        </a>
-      </p>
+    <main className="min-w-screen flex h-screen w-[100vw] justify-center bg-[#eeeeee] dark:bg-white/10">
+      <div className=" relative flex h-screen max-h-screen min-h-screen w-screen max-w-[400px] justify-center gap-8 overflow-hidden text-center text-sm  md:text-base">
+        <div className="green:bg-green-200 absolute left-0 right-0 top-0 z-20 flex h-min w-full justify-between px-4 py-2">
+          <div />
+          <ThemeSelect />
+        </div>
+        <div className="absolute -left-[60px] -top-10 h-[300px] w-[300px] overflow-hidden  rounded-full">
+          <Image
+            objectFit="cover"
+            src="/sump-01.png"
+            alt="profile-pic"
+            width={300}
+            height={300}
+          />
+        </div>
+        <div className="absolute right-4 top-[140px]">
+          <div className="flex flex-col gap-6 text-start">
+            <h2 className="text-[40px] font-semibold text-white">
+              Battu<span className="text-[#e92c2c]">shig</span>{" "}
+            </h2>
+            <h2 className="text-[40px] font-semibold text-white">
+              Yaga<span className="text-[#e92c2c]">anbaatar</span>
+            </h2>
+            <h2 className="text-center text-[24px]">Lorem, ipsum.</h2>
+          </div>
+        </div>
+        <div className="flex h-full flex-col justify-end gap-10 p-4 ">
+          <About />
+          <Contact />
+          <Social />
+        </div>
+      </div>
     </main>
   )
 }
