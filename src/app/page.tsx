@@ -59,7 +59,7 @@ export default function Home() {
             <h2 className="text-[40px] font-semibold text-white">
               Yaga<span className="text-[#e92c2c]">anbaatar</span>
             </h2>
-            <h2 className="text-center text-end text-[24px]">Lorem, ipsum.</h2>
+            <h2 className="text-end text-[24px]">T&SS合同会社</h2>
           </div>
         </div>
         <div className="flex h-full flex-col justify-end gap-4 p-4 ">
